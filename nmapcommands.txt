@@ -1,14 +1,19 @@
 ACK -sA (TCP ACK scan) 
-Command: nmap -sA -T4 scanme.nmap.org 
+Command: nmap -sA -T4 scanme.nmap.org
+"ACK" stands for "Acknowledgment." ACK is a signal or message sent by a receiving device to indicate that it has received and processed a packet of data. 
 
 SYN (Stealth) Scan (-sS) 
 Command: nmap -p22,113,139 scanme.nmap.org 
+SYN is a flag used in the TCP three-way handshake process to establish a connection between two devices. When a device sends a SYN packet to another device, it indicates its intention to initiate communication and synchronize sequence numbers. 
 
 FIN Scan (-sF)
-nmap -sF -T4 para   
+nmap -sF -T4 para 
+A "FIN scan" is a stealthy port scanning technique in which an attacker sends TCP packets with the FIN (finish) flag set to target a system's open ports. The attacker analyzes the response to determine the port's state, exploiting certain behaviors of some systems' TCP/IP stack.
 
 NULL Scan (-sN) 
 nmap –sN –p 22 scanme.nmap.org 
+A "NULL scan" is a stealthy port scanning technique where an attacker sends TCP packets with no flags set (NULL packets) to target a system's open ports. The attacker analyzes the response to determine the port's state, exploiting certain behaviors of some systems' TCP/IP stack.
 
 XMAS Scan (-sX) 
 nmap -sX -T4 scanme.nmap.org 
+An "XMAS scan" is a stealthy port scanning technique where an attacker sends TCP packets with the URG, PSH, and FIN flags set simultaneously to target a system's open ports. 
